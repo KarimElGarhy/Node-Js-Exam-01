@@ -4,11 +4,13 @@ const app = express()
 import dotenv from "dotenv"
 import { authRoutes } from "./src/middlewares/auth/auth.routes.js"
 import { globalErrorHandler } from "./utils/asyncHandler.js"
+import { userRoutes } from "./src/modules/users/user.routes.js"
 
 dotenv.config()
 app.use(express.json())
 dbConnection()
 app.use("/auth", authRoutes)
+app.use("/users", userRoutes)
 
 app.use(globalErrorHandler)
 const port = process.env.PORT || 3000
