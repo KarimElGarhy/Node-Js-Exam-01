@@ -1,4 +1,4 @@
-import { model, Schema } from "mongoose"
+import mongoose, { model, Schema } from "mongoose"
 
 //schema
 const AppSchema = new Schema(

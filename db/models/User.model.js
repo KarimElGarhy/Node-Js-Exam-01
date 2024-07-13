@@ -41,6 +41,8 @@ const userSchema = new Schema(
       enum: userData.status,
       default: userData.status[1],
     },
+    OTP: { type: String },
+    isVerified: { type: Boolean, default: false },
   },
   { timestamps: true }
 )

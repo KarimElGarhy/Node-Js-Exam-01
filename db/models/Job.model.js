@@ -1,5 +1,5 @@
-import { Schema } from "mongoose"
 import { jobData } from "../../utils/model.data.js"
+import { model, Schema } from "mongoose"
 
 // schema
 const jobSchema = new Schema(
